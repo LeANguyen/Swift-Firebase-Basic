@@ -18,7 +18,7 @@ class UserInfoViewController: UIViewController {
             if let displayName = currentUser.displayName {
                 nameLabel.text = displayName
             } else {
-                print("THERE IS NO NAME")
+                print("THERE IS NO NAME TO BE DISPLAYED")
             }
         } else {
             print("THERE IS NO CURRENT USER")

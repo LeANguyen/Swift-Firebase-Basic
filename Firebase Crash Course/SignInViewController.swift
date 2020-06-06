@@ -46,25 +46,20 @@ class SignInViewController: UIViewController {
                 self.signInIndicator.stopAnimating()
                 print("THERE IS AN ERROR")
                 print(error)
-                return
-            }
-            
-            self.view.endEditing(true)
-            let keyWindow = UIApplication.shared.connectedScenes
-                .filter({$0.activationState == .foregroundActive})
-                .map({$0 as? UIWindowScene})
-                .compactMap({$0})
-                .first?.windows
-                .filter({$0.isKeyWindow}).first
-            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-                let navigationController =  UINavigationController.init(rootViewController: viewController)
-                keyWindow?.rootViewController = navigationController
-                self.dismiss(animated: true, completion: nil)
+            } else {
+                self.view.endEditing(true)
+                let keyWindow = UIApplication.shared.connectedScenes
+                    .filter({$0.activationState == .foregroundActive})
+                    .map({$0 as? UIWindowScene})
+                    .compactMap({$0})
+                    .first?.windows
+                    .filter({$0.isKeyWindow}).first
+                if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+                    let navigationController =  UINavigationController.init(rootViewController: viewController)
+                    keyWindow?.rootViewController = navigationController
+                    self.dismiss(animated: true, completion: nil)
+                }
             }
         })
-        
-        if let displayName = Auth.auth().currentUser?.displayName {
-            print(displayName)
-        }
     }
 }
