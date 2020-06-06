@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>981504113045-r6h1qpdpc84hrc2f1r5sr7igebbu6asb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.981504113045-r6h1qpdpc84hrc2f1r5sr7igebbu6asb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC-asUF5APOtcCawReg5CIuysCMRB3Vp8A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>981504113045</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Le-An-Nguyen.Firebase-Crash-Course</string>
+	<key>PROJECT_ID</key>
+	<string>directed-symbol-223205</string>
+	<key>STORAGE_BUCKET</key>
+	<string>directed-symbol-223205.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:981504113045:ios:aafaf1e9e9a064b8419e9c</string>
+	<key>DATABASE_URL</key>
+	<string>https://directed-symbol-223205.firebaseio.com</string>
+</dict>
+</plist>
