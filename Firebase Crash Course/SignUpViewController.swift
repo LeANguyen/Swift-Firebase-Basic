@@ -28,16 +28,22 @@ class SignUpViewController: UIViewController {
         let password = passwordTextField.text!
         
         if (name == "" || email == "" || password == "") {
-            let alertController = UIAlertController(title: "Sign in Error", message: "Please make sure you provide your email address and password.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Registration Error", message: "Please make sure you provide your username, email and password.", preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(okayAction)
             self.present(alertController, animated: true, completion: nil)
             return
         }
-        Auth.auth().createUser(withEmail: emailAddress, password: password, completion: { (user, error) in
+        
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
-                print("There is an error")
+                let alertController = UIAlertController(title: "Registration Error", message: error.localizedDescription, preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okayAction)
+                self.present(alertController, animated: true, completion: nil)
+                print("THERE IS AN ERROR")
                 print(error)
+                return
             }
             
             if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest() {
@@ -47,8 +53,6 @@ class SignUpViewController: UIViewController {
                         print("Failed to change the display name: \(error.localizedDescription)")
                     }
                 })
-                print(changeRequest)
-                print("DONE WITH CHANGE REQUEST")
             }
         })
     }

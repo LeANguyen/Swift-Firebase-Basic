@@ -18,25 +18,29 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInButtonClicked(_ sender: Any) {
-        let emailAddress = emailTextField.text!
+        let email = emailTextField.text!
         let password = passwordTextField.text!
-        if (emailAddress == "" || password == "") {
-            let alertController = UIAlertController(title: "Sign in Error", message: "Please make sure you provide your email address and password.", preferredStyle: .alert)
+        
+        if (email == "" || password == "") {
+            let alertController = UIAlertController(title: "Login Error", message: "Please make sure you provide your email and password.", preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(okayAction)
             present(alertController, animated: true, completion: nil)
             return
         }
         
-        Auth.auth().signIn(withEmail: emailAddress, password: password, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
                 let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
                 self.present(alertController, animated: true, completion: nil)
+                print("THERE IS AN ERROR")
+                print(error)
                 return
             }
         })
+        
         if let displayName = Auth.auth().currentUser?.displayName {
             print(displayName)
         }

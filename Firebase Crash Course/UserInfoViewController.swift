@@ -16,7 +16,7 @@ class UserInfoViewController: UIViewController {
         super.viewDidLoad()
         if let currentUser = Auth.auth().currentUser {
             if let displayName = currentUser.displayName {
-                print(displayName)
+                nameLabel.text = displayName
             }
         }
         // Do any additional setup after loading the view.
