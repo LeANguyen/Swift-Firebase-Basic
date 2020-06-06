@@ -79,6 +79,9 @@
                                     <action selector="signUpButtonClicked:" destination="rGq-h1-LcK" eventType="touchUpInside" id="bcH-Zs-Q86"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Et4-Gr-Ao1">
+                                <rect key="frame" x="197" y="420" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -92,7 +95,9 @@
                             <constraint firstItem="bat-MA-UjY" firstAttribute="top" secondItem="Ifh-cZ-K7P" secondAttribute="bottom" constant="40" id="dzS-Sd-GGz"/>
                             <constraint firstItem="Ifh-cZ-K7P" firstAttribute="leading" secondItem="uY9-oC-KDG" secondAttribute="leading" constant="20" id="eBt-Dh-tOe"/>
                             <constraint firstItem="uY9-oC-KDG" firstAttribute="trailing" secondItem="Sx1-xo-N1w" secondAttribute="trailing" constant="20" id="l7n-JE-9KL"/>
+                            <constraint firstItem="Et4-Gr-Ao1" firstAttribute="top" secondItem="Sx1-xo-N1w" secondAttribute="bottom" constant="40" id="mab-Jl-rMa"/>
                             <constraint firstItem="uY9-oC-KDG" firstAttribute="trailing" secondItem="gCP-PU-Nlw" secondAttribute="trailing" constant="20" id="mng-wd-oWT"/>
+                            <constraint firstItem="Et4-Gr-Ao1" firstAttribute="centerX" secondItem="uY9-oC-KDG" secondAttribute="centerX" id="n67-7G-pJp"/>
                             <constraint firstItem="Sx1-xo-N1w" firstAttribute="centerX" secondItem="uY9-oC-KDG" secondAttribute="centerX" id="oPQ-Cj-SL9"/>
                             <constraint firstItem="gCP-PU-Nlw" firstAttribute="leading" secondItem="uY9-oC-KDG" secondAttribute="leading" constant="20" id="qR1-w3-YmK"/>
                             <constraint firstItem="bat-MA-UjY" firstAttribute="centerX" secondItem="uY9-oC-KDG" secondAttribute="centerX" id="syC-IN-8E0"/>
@@ -106,6 +111,7 @@
                         <outlet property="emailTextField" destination="Ifh-cZ-K7P" id="ETm-Ri-8zf"/>
                         <outlet property="nameTextField" destination="gCP-PU-Nlw" id="KWY-OG-n3V"/>
                         <outlet property="passwordTextField" destination="bat-MA-UjY" id="Hzv-yf-SYi"/>
+                        <outlet property="signUpIndicator" destination="Et4-Gr-Ao1" id="RBB-So-iKx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfr-g8-8iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

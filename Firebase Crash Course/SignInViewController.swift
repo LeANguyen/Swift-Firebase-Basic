@@ -17,8 +17,8 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.text = "nguyen@gmail.com"
-        passwordTextField.text = "123456"
+//        emailTextField.text = "nguyen@gmail.com"
+//        passwordTextField.text = "123456"
         signInIndicator.isHidden = true
     }
     
@@ -43,7 +43,6 @@ class SignInViewController: UIViewController {
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
                 self.present(alertController, animated: true, completion: nil)
-                
                 self.signInIndicator.isHidden = true
                 self.signInIndicator.stopAnimating()
                 print("THERE IS AN ERROR")

@@ -14,10 +14,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signUpIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        signUpIndicator.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -35,12 +36,17 @@ class SignUpViewController: UIViewController {
             return
         }
         
+        signUpIndicator.startAnimating()
+        signUpIndicator.isHidden = false
+        
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
                 let alertController = UIAlertController(title: "Registration Error", message: error.localizedDescription, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
                 self.present(alertController, animated: true, completion: nil)
+                self.signUpIndicator.isHidden = true
+                self.signUpIndicator.stopAnimating()
                 print("THERE IS AN ERROR")
                 print(error)
                 return
