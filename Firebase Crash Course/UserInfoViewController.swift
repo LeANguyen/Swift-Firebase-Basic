@@ -38,8 +38,15 @@ class UserInfoViewController: UIViewController {
             return
         }
         
+        self.view.endEditing(true)
+        let keyWindow = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
         if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeView") {
-            UIApplication.shared.keyWindow?.rootViewController = viewController
+            keyWindow?.rootViewController = viewController
             self.dismiss(animated: true, completion: nil)
         }
     }
