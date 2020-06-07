@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043447F2248CE4F9001D2D5B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */; };
 		044E86A4248A708D00F2550D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E86A3248A708D00F2550D /* SignInViewController.swift */; };
 		044E86A6248A739200F2550D /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E86A5248A739200F2550D /* UserInfoViewController.swift */; };
 		044E86A8248A902800F2550D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E86A7248A902800F2550D /* SignUpViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		007CCE9966DF2E6004AAE8AB /* Pods_Firebase_Crash_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_Crash_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		044E86A3248A708D00F2550D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		044E86A5248A739200F2550D /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		044E86A7248A902800F2550D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				044E86A3248A708D00F2550D /* SignInViewController.swift */,
 				044E86A7248A902800F2550D /* SignUpViewController.swift */,
 				044E86A5248A739200F2550D /* UserInfoViewController.swift */,
+				043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */,
 				046DD08F24894C6D004DA1C7 /* Main.storyboard */,
 				046DD09524894C71004DA1C7 /* Assets.xcassets */,
 				046DD09724894C71004DA1C7 /* LaunchScreen.storyboard */,
@@ -426,6 +429,7 @@
 				046DD08E24894C6D004DA1C7 /* ViewController.swift in Sources */,
 				044E86A8248A902800F2550D /* SignUpViewController.swift in Sources */,
 				044E86A6248A739200F2550D /* UserInfoViewController.swift in Sources */,
+				043447F2248CE4F9001D2D5B /* ResetPasswordViewController.swift in Sources */,
 				044E86A4248A708D00F2550D /* SignInViewController.swift in Sources */,
 				046DD08A24894C6D004DA1C7 /* AppDelegate.swift in Sources */,
 				046DD08C24894C6D004DA1C7 /* SceneDelegate.swift in Sources */,
