@@ -18,6 +18,9 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.text = "nguyen"
+        emailTextField.text = "scorcher159@gmail.com"
+        passwordTextField.text = "123456"
         signUpIndicator.isHidden = true
         // Do any additional setup after loading the view.
     }
@@ -47,8 +50,6 @@ class SignUpViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
                 self.signUpIndicator.isHidden = true
                 self.signUpIndicator.stopAnimating()
-                print("THERE IS AN ERROR")
-                print(error)
             } else {
                 self.createProfileChangeRequest()
             }
@@ -61,22 +62,35 @@ class SignUpViewController: UIViewController {
             changeRequest.displayName = name
             changeRequest.commitChanges(completion: { (error) in
                 if let error = error {
-                    print("Failed to change the display name: \(error.localizedDescription)")
+                    let alertController = UIAlertController(title: "Change Username Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(okayAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    self.signUpIndicator.isHidden = true
+                    self.signUpIndicator.stopAnimating()
                 } else {
-                    self.view.endEditing(true)
-                    let keyWindow = UIApplication.shared.connectedScenes
-                        .filter({$0.activationState == .foregroundActive})
-                        .map({$0 as? UIWindowScene})
-                        .compactMap({$0})
-                        .first?.windows
-                        .filter({$0.isKeyWindow}).first
-                    if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-                        let navigationController =  UINavigationController.init(rootViewController: viewController)
-                        keyWindow?.rootViewController = navigationController
-                        self.dismiss(animated: true, completion: nil)
-                    }
+                    self.sendEmailVerification()
                 }
             })
         }
+    }
+    
+    func sendEmailVerification() {
+        Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+            let title = (error == nil) ? "Email Verification" : "Email Verification Error"
+            let message = (error == nil) ? "We've just sent a confirmation email to your email address. Please check your inbox and click the verification link in that email to complete the sign up." : error!.localizedDescription
+            
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                // Dismiss keyboard
+                self.view.endEditing(true)
+                // Return to the login screen
+                if let navigationController = self.navigationController {
+                    navigationController.popViewController(animated: true)
+                }
+            })
+            alertController.addAction(okayAction)
+            self.present(alertController, animated: true, completion: nil)
+        })
     }
 }

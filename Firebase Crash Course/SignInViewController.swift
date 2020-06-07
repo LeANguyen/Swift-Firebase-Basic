@@ -16,7 +16,7 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.text = "nguyen@gmail.com"
+        emailTextField.text = "scorcher159@gmail.com"
         passwordTextField.text = "123456"
         signInIndicator.isHidden = true
     }
@@ -36,7 +36,7 @@ class SignInViewController: UIViewController {
         self.signInIndicator.startAnimating()
         self.signInIndicator.isHidden = false
         
-        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
             if let error = error {
                 let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -44,9 +44,21 @@ class SignInViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
                 self.signInIndicator.isHidden = true
                 self.signInIndicator.stopAnimating()
-                print("THERE IS AN ERROR")
-                print(error)
             } else {
+                guard let result = result, result.user.isEmailVerified else {
+                    let alertController = UIAlertController(title: "Login Error", message:
+                        "You haven't confirmed your email address yet. We sent you a confirmation email when you sign up. Please click the verification link in that email. If you need us to send the confirmation email again, please tap Resend Email.", preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "Resend email", style: .default, handler: { (action) in
+                        Auth.auth().currentUser?.sendEmailVerification(completion: nil)
+                    })
+                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                    alertController.addAction(okayAction)
+                    alertController.addAction(cancelAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    self.signInIndicator.isHidden = true
+                    self.signInIndicator.stopAnimating()
+                    return
+                }
                 self.view.endEditing(true)
                 let keyWindow = UIApplication.shared.connectedScenes
                     .filter({$0.activationState == .foregroundActive})

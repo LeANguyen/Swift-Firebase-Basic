@@ -32,8 +32,8 @@ class ResetPasswordViewController: UIViewController {
         
         // Send password reset email
         Auth.auth().sendPasswordReset(withEmail: email, completion: { (error) in
-            let title = (error == nil) ? "Password Reset Follow-up" : "Password ResetError"
-            let message = (error == nil) ? "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password." : error?.localizedDescription
+            let title = (error == nil) ? "Password Reset" : "Password Reset Error"
+            let message = (error == nil) ? "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password." : error!.localizedDescription
             
 //            var title = ""
 //            var message = ""
