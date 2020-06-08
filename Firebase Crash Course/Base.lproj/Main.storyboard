@@ -16,27 +16,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3a-PS-STg">
-                                <rect key="frame" x="20" y="722" width="374" height="30"/>
-                                <state key="normal" title="Sign up"/>
+                                <rect key="frame" x="20" y="792" width="374" height="30"/>
+                                <state key="normal" title="Create an Account"/>
                                 <connections>
                                     <segue destination="rGq-h1-LcK" kind="show" id="65k-pp-tac"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45S-aR-6T9">
-                                <rect key="frame" x="20" y="792" width="374" height="30"/>
-                                <state key="normal" title="Sign in"/>
+                                <rect key="frame" x="20" y="662" width="374" height="30"/>
+                                <state key="normal" title="Sign in with an Account"/>
                                 <connections>
                                     <segue destination="wVe-Xh-22E" kind="show" id="0dA-d7-sb7"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="boF-3L-o1e">
+                                <rect key="frame" x="197" y="732" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvZ-UD-olC">
+                                <rect key="frame" x="165" y="128" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATV-3M-Djp">
+                                <rect key="frame" x="132" y="592" width="150" height="30"/>
+                                <state key="normal" title="Sign in with Facebook"/>
+                                <connections>
+                                    <action selector="facebookButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wta-Hx-wHR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXz-FL-ldm">
+                                <rect key="frame" x="146" y="522" width="122" height="30"/>
+                                <state key="normal" title="Sign in with Gmail"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="bvZ-UD-olC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1hB-x7-ppA"/>
+                            <constraint firstItem="ATV-3M-Djp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2VX-iF-ylD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u3a-PS-STg" secondAttribute="bottom" constant="40" id="5Tq-Dw-4DO"/>
+                            <constraint firstItem="ATV-3M-Djp" firstAttribute="top" secondItem="JXz-FL-ldm" secondAttribute="bottom" constant="40" id="7PF-ed-Sda"/>
+                            <constraint firstItem="JXz-FL-ldm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7Pr-jI-a1A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u3a-PS-STg" secondAttribute="trailing" constant="20" id="DuE-Kv-LWt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="45S-aR-6T9" secondAttribute="bottom" constant="40" id="Evf-jS-MwA"/>
+                            <constraint firstItem="bvZ-UD-olC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="FMh-mk-QNf"/>
                             <constraint firstItem="u3a-PS-STg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IHC-Go-FtF"/>
+                            <constraint firstItem="u3a-PS-STg" firstAttribute="top" secondItem="boF-3L-o1e" secondAttribute="bottom" constant="40" id="KBp-4y-qEs"/>
+                            <constraint firstItem="45S-aR-6T9" firstAttribute="top" secondItem="ATV-3M-Djp" secondAttribute="bottom" constant="40" id="Kwn-o7-p3f"/>
                             <constraint firstItem="u3a-PS-STg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M96-SM-O71"/>
-                            <constraint firstItem="45S-aR-6T9" firstAttribute="top" secondItem="u3a-PS-STg" secondAttribute="bottom" constant="40" id="Trx-W4-f00"/>
+                            <constraint firstItem="boF-3L-o1e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WLV-EK-Pzs"/>
+                            <constraint firstItem="boF-3L-o1e" firstAttribute="top" secondItem="45S-aR-6T9" secondAttribute="bottom" constant="40" id="gZe-GW-6pq"/>
                             <constraint firstItem="45S-aR-6T9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tnd-vM-pxv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="45S-aR-6T9" secondAttribute="trailing" constant="20" id="vGA-2s-g83"/>
                             <constraint firstItem="45S-aR-6T9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wZz-QC-zha"/>
@@ -44,6 +72,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qzs-hb-L4P"/>
+                    <connections>
+                        <outlet property="signInIndicator" destination="boF-3L-o1e" id="bfw-2B-9EI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +167,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Md-dj-fYf">
                                 <rect key="frame" x="20" y="337" width="374" height="30"/>
-                                <state key="normal" title="Sign in with an Account"/>
+                                <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="signInButtonClicked:" destination="wVe-Xh-22E" eventType="touchUpInside" id="3Lz-zK-gDR"/>
                                 </connections>

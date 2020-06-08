@@ -11,6 +11,9 @@ target 'Firebase Crash Course' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
 
+  # Pods for Facebook
+  pod 'FBSDKLoginKit'
+
   target 'Firebase Crash CourseTests' do
     inherit! :search_paths
     # Pods for testing
