@@ -17,14 +17,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3a-PS-STg">
                                 <rect key="frame" x="20" y="792" width="374" height="30"/>
-                                <state key="normal" title="Create an Account"/>
+                                <state key="normal" title="CREATE AN ACCOUNT"/>
                                 <connections>
                                     <segue destination="rGq-h1-LcK" kind="show" id="65k-pp-tac"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45S-aR-6T9">
                                 <rect key="frame" x="20" y="662" width="374" height="30"/>
-                                <state key="normal" title="Sign in with an Account"/>
+                                <state key="normal" title="SIGN IN WITH AN ACCOUNT"/>
                                 <connections>
                                     <segue destination="wVe-Xh-22E" kind="show" id="0dA-d7-sb7"/>
                                 </connections>
@@ -39,15 +39,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATV-3M-Djp">
-                                <rect key="frame" x="132" y="592" width="150" height="30"/>
-                                <state key="normal" title="Sign in with Facebook"/>
+                                <rect key="frame" x="117.5" y="592" width="179" height="30"/>
+                                <state key="normal" title="SIGN IN WITH FACEBOOK"/>
                                 <connections>
                                     <action selector="facebookButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wta-Hx-wHR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXz-FL-ldm">
-                                <rect key="frame" x="146" y="522" width="122" height="30"/>
-                                <state key="normal" title="Sign in with Gmail"/>
+                                <rect key="frame" x="126" y="522" width="162" height="30"/>
+                                <state key="normal" title="SIGN IN WITH GOOGLE"/>
+                                <connections>
+                                    <action selector="googleButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNP-Vj-Lgy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -105,7 +108,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx1-xo-N1w">
                                 <rect key="frame" x="20" y="411" width="374" height="30"/>
-                                <state key="normal" title="Create an Account"/>
+                                <state key="normal" title="CREATE AN ACCOUNT"/>
                                 <connections>
                                     <action selector="signUpButtonClicked:" destination="rGq-h1-LcK" eventType="touchUpInside" id="bcH-Zs-Q86"/>
                                 </connections>
@@ -167,7 +170,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Md-dj-fYf">
                                 <rect key="frame" x="20" y="337" width="374" height="30"/>
-                                <state key="normal" title="Sign in"/>
+                                <state key="normal" title="SIGN IN"/>
                                 <connections>
                                     <action selector="signInButtonClicked:" destination="wVe-Xh-22E" eventType="touchUpInside" id="3Lz-zK-gDR"/>
                                 </connections>
@@ -187,7 +190,7 @@
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG8-d6-bfJ">
                                 <rect key="frame" x="20" y="407" width="374" height="30"/>
-                                <state key="normal" title="Reset Password"/>
+                                <state key="normal" title="RESET PASSWORD"/>
                                 <connections>
                                     <segue destination="lUs-f0-9bU" kind="show" id="45Z-wa-rEQ"/>
                                 </connections>
@@ -254,7 +257,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBQ-Ua-9Pf">
                                 <rect key="frame" x="20" y="263" width="374" height="30"/>
-                                <state key="normal" title="Reset Password"/>
+                                <state key="normal" title="RESET PASSWORD"/>
                                 <connections>
                                     <action selector="resetPasswordButtonClicked:" destination="lUs-f0-9bU" eventType="touchUpInside" id="jO0-Gf-ewX"/>
                                 </connections>
@@ -299,8 +302,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjT-lJ-c8U">
-                                <rect key="frame" x="178.5" y="525.5" width="57" height="30"/>
-                                <state key="normal" title="Sign out"/>
+                                <rect key="frame" x="171.5" y="525.5" width="71" height="30"/>
+                                <state key="normal" title="SIGN OUT"/>
                                 <connections>
                                     <action selector="signOutButtonClicked:" destination="qRP-hC-nUa" eventType="touchUpInside" id="qqv-gh-Q75"/>
                                 </connections>

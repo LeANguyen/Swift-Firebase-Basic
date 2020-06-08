@@ -10,13 +10,17 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 import FBSDKLoginKit
+import GoogleSignIn
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var signInIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        
         signInIndicator.isHidden = true
         if let user = Auth.auth().currentUser {
             if let name = user.displayName {
@@ -80,7 +84,6 @@ class ViewController: UIViewController {
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
                 self.present(alertController, animated: true, completion: nil)
-                
                 self.signInIndicator.isHidden = true
                 self.signInIndicator.stopAnimating()
             } else {
@@ -98,6 +101,55 @@ class ViewController: UIViewController {
                 }
             }
         })
+    }
+}
+
+extension ViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error != nil {
+            return
+        }
+        guard let authentication = user.authentication else {
+            return
+        }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+        signInIndicator.startAnimating()
+        signInIndicator.isHidden = false
+        Auth.auth().signIn(with: credential) { (result, error) in
+            if let error = error {
+                print("Login error: \(error.localizedDescription)")
+                let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okayAction)
+                self.present(alertController, animated: true, completion: nil)
+                
+                self.signInIndicator.isHidden = true
+                self.signInIndicator.stopAnimating()
+                return
+            } else {
+                self.view.endEditing(true)
+                let keyWindow = UIApplication.shared.connectedScenes
+                    .filter({$0.activationState == .foregroundActive})
+                    .map({$0 as? UIWindowScene})
+                    .compactMap({$0})
+                    .first?.windows
+                    .filter({$0.isKeyWindow}).first
+                if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+                    let navigationController =  UINavigationController.init(rootViewController: viewController)
+                    keyWindow?.rootViewController = navigationController
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        
+    }
+    
+    @IBAction func googleButtonClicked(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
     }
 }
 

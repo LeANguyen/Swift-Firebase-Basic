@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 import FBSDKCoreKit
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,14 +18,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Configure Firebase
         FirebaseApp.configure()
+        
+        // Configure Facebook Login
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        // Configure Google Login
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         return true
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        let handled = ApplicationDelegate.shared.application(app, open: url, options:
-        options)
+        let handled: Bool
+        if url.absoluteString.contains("fb") {
+            handled = ApplicationDelegate.shared.application(app, open: url, options: options)
+        } else {
+            handled = GIDSignIn.sharedInstance().handle(url)
+        }
         return handled
     }
     // MARK: UISceneSession Lifecycle

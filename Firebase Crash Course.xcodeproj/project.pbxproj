@@ -198,6 +198,7 @@
 				046DD08324894C6D004DA1C7 /* Frameworks */,
 				046DD08424894C6D004DA1C7 /* Resources */,
 				4A5C2735F1B31B32962F069F /* [CP] Embed Pods Frameworks */,
+				6080512773C2CB97AB6F355D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +237,7 @@
 				046DD0A724894C71004DA1C7 /* Frameworks */,
 				046DD0A824894C71004DA1C7 /* Resources */,
 				C2ECB24559DC449403FD3F69 /* [CP] Embed Pods Frameworks */,
+				EC47CB553ED13007F256C7CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -402,6 +404,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6080512773C2CB97AB6F355D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C2ECB24559DC449403FD3F69 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,6 +436,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC47CB553ED13007F256C7CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
