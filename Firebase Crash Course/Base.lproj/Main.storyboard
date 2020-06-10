@@ -52,6 +52,22 @@
                                     <action selector="googleButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNP-Vj-Lgy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksv-Ck-ZTa">
+                                <rect key="frame" x="156" y="460" width="102" height="30"/>
+                                <state key="normal" title="IMAGE PICKER"/>
+                                <connections>
+                                    <action selector="imagePickerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tdT-yd-Wkc"/>
+                                    <segue destination="459-Pb-gOg" kind="show" id="9RH-qa-iQ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aix-dq-Koj">
+                                <rect key="frame" x="106.5" y="390" width="201" height="30"/>
+                                <state key="normal" title="IMAGE PICKER THIRD PARTY"/>
+                                <connections>
+                                    <action selector="imagePickerThirdPartyButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Bg-ws-5EO"/>
+                                    <segue destination="cmd-00-rpM" kind="show" id="YTG-gT-zgd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -68,7 +84,11 @@
                             <constraint firstItem="u3a-PS-STg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M96-SM-O71"/>
                             <constraint firstItem="boF-3L-o1e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WLV-EK-Pzs"/>
                             <constraint firstItem="boF-3L-o1e" firstAttribute="top" secondItem="45S-aR-6T9" secondAttribute="bottom" constant="40" id="gZe-GW-6pq"/>
+                            <constraint firstItem="Ksv-Ck-ZTa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="j56-jY-dio"/>
+                            <constraint firstItem="aix-dq-Koj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mNJ-jw-EFr"/>
                             <constraint firstItem="45S-aR-6T9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tnd-vM-pxv"/>
+                            <constraint firstItem="Ksv-Ck-ZTa" firstAttribute="top" secondItem="aix-dq-Koj" secondAttribute="bottom" constant="40" id="tyn-YU-cnc"/>
+                            <constraint firstItem="Ksv-Ck-ZTa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="u7o-qB-cZr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="45S-aR-6T9" secondAttribute="trailing" constant="20" id="vGA-2s-g83"/>
                             <constraint firstItem="45S-aR-6T9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wZz-QC-zha"/>
                         </constraints>
@@ -158,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfr-g8-8iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405.7971014492755" y="93.75"/>
+            <point key="canvasLocation" x="1406" y="94"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="hGI-SF-RPA">
@@ -362,6 +382,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qI6-2z-1gC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-326" y="1500"/>
+        </scene>
+        <!--Image Picker View Controller-->
+        <scene sceneID="Vkd-o2-uHj">
+            <objects>
+                <viewController storyboardIdentifier="ImagePickerView" id="459-Pb-gOg" customClass="ImagePickerViewController" customModule="Firebase_Crash_Course" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dod-JV-B68">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx2-Vl-dm7">
+                                <rect key="frame" x="156" y="433" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="IMAGE PICKER"/>
+                                <connections>
+                                    <action selector="imagePickerButtonClicked:" destination="459-Pb-gOg" eventType="touchUpInside" id="pmz-JS-KNe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="m7s-Fi-Dla"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xIL-ha-Thj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aya-k8-nHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="-646"/>
+        </scene>
+        <!--Image Picker Third Party View Controller-->
+        <scene sceneID="JWh-3S-vXo">
+            <objects>
+                <viewController storyboardIdentifier="ImagePickerThirdPartyView" id="cmd-00-rpM" customClass="ImagePickerThirdPartyViewController" customModule="Firebase_Crash_Course" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RUP-mo-8Dt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbC-lG-Vqq">
+                                <rect key="frame" x="107" y="433" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="IMAGE PICKER THIRD PARTY"/>
+                                <connections>
+                                    <action selector="imagePickerThirdPartyButtonClicked:" destination="cmd-00-rpM" eventType="touchUpInside" id="4gO-oC-xtg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eEm-xX-pY1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Nb-P1-lQ2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icQ-8r-bNK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="-646"/>
         </scene>
     </scenes>
 </document>

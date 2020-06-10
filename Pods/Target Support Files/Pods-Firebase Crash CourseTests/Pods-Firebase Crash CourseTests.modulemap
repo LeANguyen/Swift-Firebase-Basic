@@ -1,6 +1,0 @@
-framework module Pods_Firebase_Crash_CourseTests {
-  umbrella header "Pods-Firebase Crash CourseTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

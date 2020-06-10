@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import Firebase
+import FBSDKCoreKit
 import FBSDKLoginKit
 import GoogleSignIn
 
@@ -52,6 +53,12 @@ class ViewController: UIViewController {
 //        ref.child("student1/age").removeValue()
     }
     
+    @IBAction func imagePickerThirdPartyButtonClicked(_ sender: Any) {
+    }
+    
+    @IBAction func imagePickerButtonClicked(_ sender: Any) {
+    }
+    
     @IBAction func facebookButtonClicked(_ sender: Any) {
         let fbLoginManager = LoginManager()
         fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
@@ -59,12 +66,13 @@ class ViewController: UIViewController {
                 print("Failed to login: \(error.localizedDescription)")
                 return
             }
+            
             guard let accessToken = AccessToken.current else {
                 print("Failed to get access token")
                 return
             }
             print("ACCESS TOKEN: \(accessToken)")
-            
+
             guard let result = result else { return }
             if (!result.isCancelled) {
                 self.fbLogin(accessTokenString: accessToken.tokenString)
@@ -151,5 +159,7 @@ extension ViewController: GIDSignInDelegate {
     @IBAction func googleButtonClicked(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
     }
+    
+    
 }
 

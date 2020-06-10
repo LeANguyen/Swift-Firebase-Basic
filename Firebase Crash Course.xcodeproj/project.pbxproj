@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		043447F2248CE4F9001D2D5B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */; };
+		043C58DB2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C58DA2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift */; };
 		044E86A4248A708D00F2550D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E86A3248A708D00F2550D /* SignInViewController.swift */; };
 		044E86A6248A739200F2550D /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E86A5248A739200F2550D /* UserInfoViewController.swift */; };
 		044E86A8248A902800F2550D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E86A7248A902800F2550D /* SignUpViewController.swift */; };
@@ -21,9 +22,10 @@
 		046DD0A424894C71004DA1C7 /* Firebase_Crash_CourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DD0A324894C71004DA1C7 /* Firebase_Crash_CourseTests.swift */; };
 		046DD0AF24894C71004DA1C7 /* Firebase_Crash_CourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DD0AE24894C71004DA1C7 /* Firebase_Crash_CourseUITests.swift */; };
 		046DD0BD24894CDD004DA1C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046DD0BC24894CDC004DA1C7 /* GoogleService-Info.plist */; };
-		A6526E6D4035215384D0D359 /* Pods_Firebase_Crash_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007CCE9966DF2E6004AAE8AB /* Pods_Firebase_Crash_Course.framework */; };
-		BB305CF3D4D1E5456C219722 /* Pods_Firebase_Crash_Course_Firebase_Crash_CourseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A23A90C9CBCA6B101403A1 /* Pods_Firebase_Crash_Course_Firebase_Crash_CourseUITests.framework */; };
-		E61727595C568C9C1C6DAB7A /* Pods_Firebase_Crash_CourseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2369CFC46715A3B6594FC154 /* Pods_Firebase_Crash_CourseTests.framework */; };
+		04DF90D8248F89A700D3D2D1 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF90D7248F89A700D3D2D1 /* ImagePickerViewController.swift */; };
+		ABFD0F039B1BF1C020891C2B /* libPods-Firebase Crash CourseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7635F9846A94E0CA70BF8D /* libPods-Firebase Crash CourseTests.a */; };
+		CD4D6927087D15F4F3ACB7E6 /* libPods-Firebase Crash Course-Firebase Crash CourseUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B89EB81A56C3D482E138C86 /* libPods-Firebase Crash Course-Firebase Crash CourseUITests.a */; };
+		F2FDE6F385FDEB83056BE3FA /* libPods-Firebase Crash Course.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6F442BC61D4DE27A8EDE8A /* libPods-Firebase Crash Course.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		007CCE9966DF2E6004AAE8AB /* Pods_Firebase_Crash_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_Crash_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		043C58DA2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerThirdPartyViewController.swift; sourceTree = "<group>"; };
 		044E86A3248A708D00F2550D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		044E86A5248A739200F2550D /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		044E86A7248A902800F2550D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -65,14 +67,16 @@
 		046DD0AE24894C71004DA1C7 /* Firebase_Crash_CourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_Crash_CourseUITests.swift; sourceTree = "<group>"; };
 		046DD0B024894C71004DA1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046DD0BC24894CDC004DA1C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2369CFC46715A3B6594FC154 /* Pods_Firebase_Crash_CourseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_Crash_CourseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48A23A90C9CBCA6B101403A1 /* Pods_Firebase_Crash_Course_Firebase_Crash_CourseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_Crash_Course_Firebase_Crash_CourseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		577B3196D6F333282C3379F6 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig"; path = "Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6DE1F4A9A199A78E7F393080 /* Pods-Firebase Crash Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash Course.release.xcconfig"; path = "Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course.release.xcconfig"; sourceTree = "<group>"; };
-		883CDD6967EED0DECB498C2D /* Pods-Firebase Crash Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash Course.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course.debug.xcconfig"; sourceTree = "<group>"; };
-		9FDDD9D3E41C52ADD48E935E /* Pods-Firebase Crash CourseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash CourseTests.release.xcconfig"; path = "Target Support Files/Pods-Firebase Crash CourseTests/Pods-Firebase Crash CourseTests.release.xcconfig"; sourceTree = "<group>"; };
-		A6E1E599407BA988141EF4F8 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A97ADF0BB4E760D068154E6B /* Pods-Firebase Crash CourseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash CourseTests.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Crash CourseTests/Pods-Firebase Crash CourseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		04DF90D7248F89A700D3D2D1 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		0B6F442BC61D4DE27A8EDE8A /* libPods-Firebase Crash Course.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Firebase Crash Course.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F221DAF8732E0C8CD326E83 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		37636A9973F9C811F1E6F75C /* Pods-Firebase Crash CourseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash CourseTests.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Crash CourseTests/Pods-Firebase Crash CourseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66241CF2225386AE714FE17E /* Pods-Firebase Crash Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash Course.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course.debug.xcconfig"; sourceTree = "<group>"; };
+		7B89EB81A56C3D482E138C86 /* libPods-Firebase Crash Course-Firebase Crash CourseUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Firebase Crash Course-Firebase Crash CourseUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		861D656461D095A68CD698F6 /* Pods-Firebase Crash Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash Course.release.xcconfig"; path = "Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course.release.xcconfig"; sourceTree = "<group>"; };
+		D916E7CD5D101A7F4EC9AF2B /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig"; path = "Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D9EC4AB6F983C90DD2227576 /* Pods-Firebase Crash CourseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash CourseTests.release.xcconfig"; path = "Target Support Files/Pods-Firebase Crash CourseTests/Pods-Firebase Crash CourseTests.release.xcconfig"; sourceTree = "<group>"; };
+		EE7635F9846A94E0CA70BF8D /* libPods-Firebase Crash CourseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Firebase Crash CourseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6526E6D4035215384D0D359 /* Pods_Firebase_Crash_Course.framework in Frameworks */,
+				F2FDE6F385FDEB83056BE3FA /* libPods-Firebase Crash Course.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61727595C568C9C1C6DAB7A /* Pods_Firebase_Crash_CourseTests.framework in Frameworks */,
+				ABFD0F039B1BF1C020891C2B /* libPods-Firebase Crash CourseTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB305CF3D4D1E5456C219722 /* Pods_Firebase_Crash_Course_Firebase_Crash_CourseUITests.framework in Frameworks */,
+				CD4D6927087D15F4F3ACB7E6 /* libPods-Firebase Crash Course-Firebase Crash CourseUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +110,12 @@
 		0082DD48A87ACA9D2989D863 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				883CDD6967EED0DECB498C2D /* Pods-Firebase Crash Course.debug.xcconfig */,
-				6DE1F4A9A199A78E7F393080 /* Pods-Firebase Crash Course.release.xcconfig */,
-				A6E1E599407BA988141EF4F8 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig */,
-				577B3196D6F333282C3379F6 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig */,
-				A97ADF0BB4E760D068154E6B /* Pods-Firebase Crash CourseTests.debug.xcconfig */,
-				9FDDD9D3E41C52ADD48E935E /* Pods-Firebase Crash CourseTests.release.xcconfig */,
+				66241CF2225386AE714FE17E /* Pods-Firebase Crash Course.debug.xcconfig */,
+				861D656461D095A68CD698F6 /* Pods-Firebase Crash Course.release.xcconfig */,
+				1F221DAF8732E0C8CD326E83 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig */,
+				D916E7CD5D101A7F4EC9AF2B /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig */,
+				37636A9973F9C811F1E6F75C /* Pods-Firebase Crash CourseTests.debug.xcconfig */,
+				D9EC4AB6F983C90DD2227576 /* Pods-Firebase Crash CourseTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -124,7 +128,7 @@
 				046DD0AD24894C71004DA1C7 /* Firebase Crash CourseUITests */,
 				046DD08724894C6D004DA1C7 /* Products */,
 				0082DD48A87ACA9D2989D863 /* Pods */,
-				C0DF2D5F369F111CB42D8CC6 /* Frameworks */,
+				A63B36399CA1F57A48BBCB60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +153,8 @@
 				044E86A5248A739200F2550D /* UserInfoViewController.swift */,
 				043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */,
 				046DD08F24894C6D004DA1C7 /* Main.storyboard */,
+				043C58DA2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift */,
+				04DF90D7248F89A700D3D2D1 /* ImagePickerViewController.swift */,
 				046DD09524894C71004DA1C7 /* Assets.xcassets */,
 				046DD09724894C71004DA1C7 /* LaunchScreen.storyboard */,
 				046DD09A24894C71004DA1C7 /* Info.plist */,
@@ -176,12 +182,12 @@
 			path = "Firebase Crash CourseUITests";
 			sourceTree = "<group>";
 		};
-		C0DF2D5F369F111CB42D8CC6 /* Frameworks */ = {
+		A63B36399CA1F57A48BBCB60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				007CCE9966DF2E6004AAE8AB /* Pods_Firebase_Crash_Course.framework */,
-				48A23A90C9CBCA6B101403A1 /* Pods_Firebase_Crash_Course_Firebase_Crash_CourseUITests.framework */,
-				2369CFC46715A3B6594FC154 /* Pods_Firebase_Crash_CourseTests.framework */,
+				0B6F442BC61D4DE27A8EDE8A /* libPods-Firebase Crash Course.a */,
+				7B89EB81A56C3D482E138C86 /* libPods-Firebase Crash Course-Firebase Crash CourseUITests.a */,
+				EE7635F9846A94E0CA70BF8D /* libPods-Firebase Crash CourseTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -193,12 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046DD0B324894C72004DA1C7 /* Build configuration list for PBXNativeTarget "Firebase Crash Course" */;
 			buildPhases = (
-				12413898EECDC05155C8E805 /* [CP] Check Pods Manifest.lock */,
+				CC042CC551D2E11DFF47F4FF /* [CP] Check Pods Manifest.lock */,
 				046DD08224894C6D004DA1C7 /* Sources */,
 				046DD08324894C6D004DA1C7 /* Frameworks */,
 				046DD08424894C6D004DA1C7 /* Resources */,
-				4A5C2735F1B31B32962F069F /* [CP] Embed Pods Frameworks */,
-				6080512773C2CB97AB6F355D /* [CP] Copy Pods Resources */,
+				BE18485361D43EC867BE35BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,7 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046DD0B624894C72004DA1C7 /* Build configuration list for PBXNativeTarget "Firebase Crash CourseTests" */;
 			buildPhases = (
-				156748DB32C4BD8199353892 /* [CP] Check Pods Manifest.lock */,
+				DD24B848F24309387149CE71 /* [CP] Check Pods Manifest.lock */,
 				046DD09B24894C71004DA1C7 /* Sources */,
 				046DD09C24894C71004DA1C7 /* Frameworks */,
 				046DD09D24894C71004DA1C7 /* Resources */,
@@ -232,12 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046DD0B924894C72004DA1C7 /* Build configuration list for PBXNativeTarget "Firebase Crash CourseUITests" */;
 			buildPhases = (
-				1F0D1F3E82D20572C0AB5407 /* [CP] Check Pods Manifest.lock */,
+				F38946A81A47E7C5BF01C939 /* [CP] Check Pods Manifest.lock */,
 				046DD0A624894C71004DA1C7 /* Sources */,
 				046DD0A724894C71004DA1C7 /* Frameworks */,
 				046DD0A824894C71004DA1C7 /* Resources */,
-				C2ECB24559DC449403FD3F69 /* [CP] Embed Pods Frameworks */,
-				EC47CB553ED13007F256C7CE /* [CP] Copy Pods Resources */,
+				EC19B0FE88C88852833A4E37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,7 +325,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12413898EECDC05155C8E805 /* [CP] Check Pods Manifest.lock */ = {
+		BE18485361D43EC867BE35BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC042CC551D2E11DFF47F4FF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,7 +364,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		156748DB32C4BD8199353892 /* [CP] Check Pods Manifest.lock */ = {
+		DD24B848F24309387149CE71 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,7 +386,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1F0D1F3E82D20572C0AB5407 /* [CP] Check Pods Manifest.lock */ = {
+		EC19B0FE88C88852833A4E37 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F38946A81A47E7C5BF01C939 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,74 +425,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4A5C2735F1B31B32962F069F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6080512773C2CB97AB6F355D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course/Pods-Firebase Crash Course-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C2ECB24559DC449403FD3F69 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EC47CB553ED13007F256C7CE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -468,8 +438,10 @@
 				043447F2248CE4F9001D2D5B /* ResetPasswordViewController.swift in Sources */,
 				044E86A4248A708D00F2550D /* SignInViewController.swift in Sources */,
 				046DD08A24894C6D004DA1C7 /* AppDelegate.swift in Sources */,
+				043C58DB2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift in Sources */,
 				046DD08C24894C6D004DA1C7 /* SceneDelegate.swift in Sources */,
 				046DD09424894C6D004DA1C7 /* Firebase_Crash_Course.xcdatamodeld in Sources */,
+				04DF90D8248F89A700D3D2D1 /* ImagePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,10 +612,11 @@
 		};
 		046DD0B424894C72004DA1C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 883CDD6967EED0DECB498C2D /* Pods-Firebase Crash Course.debug.xcconfig */;
+			baseConfigurationReference = 66241CF2225386AE714FE17E /* Pods-Firebase Crash Course.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLP72NH4NA;
 				INFOPLIST_FILE = "Firebase Crash Course/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,10 +631,11 @@
 		};
 		046DD0B524894C72004DA1C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DE1F4A9A199A78E7F393080 /* Pods-Firebase Crash Course.release.xcconfig */;
+			baseConfigurationReference = 861D656461D095A68CD698F6 /* Pods-Firebase Crash Course.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLP72NH4NA;
 				INFOPLIST_FILE = "Firebase Crash Course/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -676,7 +650,7 @@
 		};
 		046DD0B724894C72004DA1C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A97ADF0BB4E760D068154E6B /* Pods-Firebase Crash CourseTests.debug.xcconfig */;
+			baseConfigurationReference = 37636A9973F9C811F1E6F75C /* Pods-Firebase Crash CourseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -698,7 +672,7 @@
 		};
 		046DD0B824894C72004DA1C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FDDD9D3E41C52ADD48E935E /* Pods-Firebase Crash CourseTests.release.xcconfig */;
+			baseConfigurationReference = D9EC4AB6F983C90DD2227576 /* Pods-Firebase Crash CourseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -720,7 +694,7 @@
 		};
 		046DD0BA24894C72004DA1C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6E1E599407BA988141EF4F8 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig */;
+			baseConfigurationReference = 1F221DAF8732E0C8CD326E83 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -740,7 +714,7 @@
 		};
 		046DD0BB24894C72004DA1C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 577B3196D6F333282C3379F6 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig */;
+			baseConfigurationReference = D916E7CD5D101A7F4EC9AF2B /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

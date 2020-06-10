@@ -14,6 +14,7 @@ class UserInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Main View")
         if let currentUser = Auth.auth().currentUser {
             if let displayName = currentUser.displayName {
                 nameLabel.text = displayName
