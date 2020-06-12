@@ -23,6 +23,10 @@
 		046DD0AF24894C71004DA1C7 /* Firebase_Crash_CourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DD0AE24894C71004DA1C7 /* Firebase_Crash_CourseUITests.swift */; };
 		046DD0BD24894CDD004DA1C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046DD0BC24894CDC004DA1C7 /* GoogleService-Info.plist */; };
 		04DF90D8248F89A700D3D2D1 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF90D7248F89A700D3D2D1 /* ImagePickerViewController.swift */; };
+		04E88CBE249279990031DBFD /* grass.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04E88CBD249279990031DBFD /* grass.gif */; };
+		04EA20FD24935AFF00BC72F0 /* tower.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 04EA20FC24935AFF00BC72F0 /* tower.jpeg */; };
+		04EA20FF24935BE200BC72F0 /* light1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 04EA20FE24935BE200BC72F0 /* light1.jpeg */; };
+		04EA210124937A9C00BC72F0 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EA210024937A9B00BC72F0 /* facebook.png */; };
 		ABFD0F039B1BF1C020891C2B /* libPods-Firebase Crash CourseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7635F9846A94E0CA70BF8D /* libPods-Firebase Crash CourseTests.a */; };
 		CD4D6927087D15F4F3ACB7E6 /* libPods-Firebase Crash Course-Firebase Crash CourseUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B89EB81A56C3D482E138C86 /* libPods-Firebase Crash Course-Firebase Crash CourseUITests.a */; };
 		F2FDE6F385FDEB83056BE3FA /* libPods-Firebase Crash Course.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6F442BC61D4DE27A8EDE8A /* libPods-Firebase Crash Course.a */; };
@@ -68,6 +72,10 @@
 		046DD0B024894C71004DA1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046DD0BC24894CDC004DA1C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04DF90D7248F89A700D3D2D1 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		04E88CBD249279990031DBFD /* grass.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = grass.gif; sourceTree = "<group>"; };
+		04EA20FC24935AFF00BC72F0 /* tower.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tower.jpeg; sourceTree = "<group>"; };
+		04EA20FE24935BE200BC72F0 /* light1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light1.jpeg; sourceTree = "<group>"; };
+		04EA210024937A9B00BC72F0 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		0B6F442BC61D4DE27A8EDE8A /* libPods-Firebase Crash Course.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Firebase Crash Course.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F221DAF8732E0C8CD326E83 /* Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Crash Course-Firebase Crash CourseUITests/Pods-Firebase Crash Course-Firebase Crash CourseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		37636A9973F9C811F1E6F75C /* Pods-Firebase Crash CourseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Crash CourseTests.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Crash CourseTests/Pods-Firebase Crash CourseTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,8 +161,12 @@
 				044E86A5248A739200F2550D /* UserInfoViewController.swift */,
 				043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */,
 				046DD08F24894C6D004DA1C7 /* Main.storyboard */,
+				04EA210024937A9B00BC72F0 /* facebook.png */,
+				04EA20FC24935AFF00BC72F0 /* tower.jpeg */,
+				04EA20FE24935BE200BC72F0 /* light1.jpeg */,
 				043C58DA2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift */,
 				04DF90D7248F89A700D3D2D1 /* ImagePickerViewController.swift */,
+				04E88CBD249279990031DBFD /* grass.gif */,
 				046DD09524894C71004DA1C7 /* Assets.xcassets */,
 				046DD09724894C71004DA1C7 /* LaunchScreen.storyboard */,
 				046DD09A24894C71004DA1C7 /* Info.plist */,
@@ -302,9 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				046DD09924894C71004DA1C7 /* LaunchScreen.storyboard in Resources */,
+				04EA210124937A9C00BC72F0 /* facebook.png in Resources */,
+				04E88CBE249279990031DBFD /* grass.gif in Resources */,
 				046DD0BD24894CDD004DA1C7 /* GoogleService-Info.plist in Resources */,
+				04EA20FF24935BE200BC72F0 /* light1.jpeg in Resources */,
 				046DD09624894C71004DA1C7 /* Assets.xcassets in Resources */,
 				046DD09124894C6D004DA1C7 /* Main.storyboard in Resources */,
+				04EA20FD24935AFF00BC72F0 /* tower.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

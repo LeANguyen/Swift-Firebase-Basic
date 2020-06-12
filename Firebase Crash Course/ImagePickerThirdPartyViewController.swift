@@ -8,9 +8,49 @@
 
 import UIKit
 import ImagePicker
+import FirebaseStorage
 
-class ImagePickerThirdPartyViewController: UIViewController, ImagePickerDelegate {
+class ImagePickerThirdPartyViewController: UIViewController {
+    @IBOutlet weak var myImageView: UIImageView!
+    var imagePickerController = ImagePickerController()
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setImagePickerControllerConfiguration()
+        // Do any additional setup after loading the view.
+        
+        let storageReference = Storage.storage().reference().child("images").child("Down.png")
+        storageReference.getData(maxSize: 1 * 1024 * 1024) { data, error in
+          if let error = error {
+            print("Download Error: \(error)")
+            // Uh-oh, an error occurred!
+          } else {
+            // Data for "images/island.jpg" is returned
+            let image = UIImage(data: data!)
+            self.myImageView.image = image
+          }
+        }
+    }
+    
+    @IBAction func imagePickerThirdPartyButtonClicked(_ sender: Any) {
+        present(imagePickerController, animated: true, completion: nil)
+    }
+}
 
+extension ImagePickerThirdPartyViewController: ImagePickerDelegate {
+    func setImagePickerControllerConfiguration() {
+        let configuration = Configuration()
+        imagePickerController = ImagePickerController(configuration: configuration)
+        configuration.doneButtonTitle = "Finish"
+        configuration.noImagesTitle = "Sorry! There are no images here!"
+        configuration.recordLocation = false
+        configuration.backgroundColor = .cyan
+
+        let imagePickerController = ImagePickerController(configuration: configuration)
+        imagePickerController.delegate = self
+        imagePickerController.imageLimit = 5
+    }
+    
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         print("wrapper button clicked")
     }
@@ -27,37 +67,4 @@ class ImagePickerThirdPartyViewController: UIViewController, ImagePickerDelegate
         print("cancel button clicked")
         dismiss(animated: true, completion: nil)
     }
-    
-
-    var imagePickerController: ImagePickerController?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let configuration = Configuration()
-        imagePickerController = ImagePickerController(configuration: configuration)
-        configuration.doneButtonTitle = "Finish"
-        configuration.noImagesTitle = "Sorry! There are no images here!"
-        configuration.recordLocation = false
-        configuration.backgroundColor = .cyan
-
-        let imagePickerController = ImagePickerController(configuration: configuration)
-        imagePickerController.delegate = self
-        imagePickerController.imageLimit = 5
-        // Do any additional setup after loading the view.
-    }
-    
-
-    @IBAction func imagePickerThirdPartyButtonClicked(_ sender: Any) {
-        present(imagePickerController, animated: true, completion: nil)
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

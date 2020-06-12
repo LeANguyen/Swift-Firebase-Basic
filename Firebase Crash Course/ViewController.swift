@@ -14,51 +14,121 @@ import FBSDKLoginKit
 import GoogleSignIn
 
 class ViewController: UIViewController {
+    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var signInIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var googleButton: UIButton!
+    @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var logoImageView: UIImageView!
+    
+    @IBOutlet weak var sideView: UIView!
+    @IBOutlet weak var menuView: UIView!
+    
+    override func viewDidLayoutSubviews() {
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        
-        signInIndicator.isHidden = true
-        if let user = Auth.auth().currentUser {
-            if let name = user.displayName {
-                print(name)
-            } else {
-                print("no name")
-            }
-        } else {
-            print("no user")
-        }
-//        let ref = Database.database().reference()
+//        for familyName in UIFont.familyNames {
+//            print("\n-- \(familyName) \n")
+//            for fontName in UIFont.fontNames(forFamilyName: familyName) {
+//                print(fontName)
+//            }
+//        }
+        setOutlet()
+        setGIDSignIn()
+        //        let ref = Database.database().reference()
         
         // Do any additional setup after loading the view.
         
         // Create
-//        ref.child("student1").setValue(["name": "Nguyen", "age": 22])
+        //        ref.child("student1").setValue(["name": "Nguyen", "age": 22])
         
         // Get
-//        ref.child("student1/name").observeSingleEvent(of: .value) { (snapshot) in
-//            guard let name = snapshot.value as? String else {return}
-//            print(name)
-//        }
-//
-//        // Update
-//        ref.child("student1/name").setValue("Phi")
-//        ref.child("student1").updateChildValues(["name":"Dong", "age":23])
-//
-//        // Delete
-//        ref.child("student1/age").removeValue()
+        //        ref.child("student1/name").observeSingleEvent(of: .value) { (snapshot) in
+        //            guard let name = snapshot.value as? String else {return}
+        //            print(name)
+        //        }
+        //
+        //        // Update
+        //        ref.child("student1/name").setValue("Phi")
+        //        ref.child("student1").updateChildValues(["name":"Dong", "age":23])
+        //
+        //        // Delete
+        //        ref.child("student1/age").removeValue()
     }
-    
-    @IBAction func imagePickerThirdPartyButtonClicked(_ sender: Any) {
+}
+
+extension ViewController {
+    func setOutlet() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.locations = [0, 1]
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [UIColor.systemIndigo.cgColor, UIColor.systemGreen.cgColor]
+        menuView.layer.insertSublayer(gradientLayer, at: 0)
+        sideView.backgroundColor = UIColor(patternImage: UIImage(named: "light1.jpeg")!)
+        self.view.backgroundColor = .systemIndigo
+        
+        welcomeLabel.textColor = .white
+        welcomeLabel.font = UIFont(name: "ArialRoundedMTBold", size: 30)
+        
+        logoImageView.image = UIImage(systemName: "camera.circle")
+        logoImageView.tintColor = .white
+        
+        signInIndicator.isHidden = true
+        signInIndicator.style = .large
+        signInIndicator.color = .white
+        
+        signInButton.tintColor = .white
+        signInButton.layer.borderWidth = 2
+        signInButton.layer.borderColor = UIColor.white.cgColor
+        signInButton.frame.size.height = 50
+        signInButton.contentEdgeInsets.top = 15
+        signInButton.contentEdgeInsets.bottom = 15
+        signInButton.titleLabel?.font = UIFont(name: "ArialRoundedMTBold", size: 15)
+        signInButton.setImage(UIImage(systemName: "person.fill"), for: .normal)
+        signInButton.layer.cornerRadius = signInButton.frame.height / 2
+        signInButton.clipsToBounds = true
+        
+        signUpButton.tintColor = .white
+        signUpButton.layer.borderWidth = 2
+        signUpButton.layer.borderColor = UIColor.white.cgColor
+        signUpButton.frame.size.height = 50
+        signUpButton.contentEdgeInsets.top = 15
+        signUpButton.contentEdgeInsets.bottom = 15
+        signUpButton.titleLabel?.font = UIFont(name: "ArialRoundedMTBold", size: 15)
+        signUpButton.setImage(UIImage(systemName: "person.badge.plus.fill"), for: .normal)
+        signUpButton.layer.cornerRadius = signUpButton.frame.height / 2
+        signUpButton.clipsToBounds = true
+        
+        googleButton.tintColor = .white
+        googleButton.backgroundColor = .systemRed
+        googleButton.frame.size.height = 50
+        googleButton.contentEdgeInsets.top = 15
+        googleButton.contentEdgeInsets.bottom = 15
+        googleButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        googleButton.setImage(UIImage(systemName: "g.circle.fill"), for: .normal)
+        googleButton.layer.cornerRadius = googleButton.frame.height / 2
+        googleButton.clipsToBounds = true
+        
+        facebookButton.tintColor = .white
+        facebookButton.backgroundColor = .systemIndigo
+        facebookButton.frame.size.height = 50
+        facebookButton.contentEdgeInsets.top = 15
+        facebookButton.contentEdgeInsets.bottom = 15
+        facebookButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        facebookButton.setImage(UIImage(systemName: "f.circle.fill"), for: .normal)
+        facebookButton.layer.cornerRadius = facebookButton.frame.height / 2
+        facebookButton.clipsToBounds = true
     }
-    
-    @IBAction func imagePickerButtonClicked(_ sender: Any) {
-    }
-    
+}
+
+extension ViewController {
     @IBAction func facebookButtonClicked(_ sender: Any) {
         let fbLoginManager = LoginManager()
         fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
@@ -72,7 +142,7 @@ class ViewController: UIViewController {
                 return
             }
             print("ACCESS TOKEN: \(accessToken)")
-
+            
             guard let result = result else { return }
             if (!result.isCancelled) {
                 self.fbLogin(accessTokenString: accessToken.tokenString)
@@ -113,6 +183,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: GIDSignInDelegate {
+    func setGIDSignIn() {
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+    }
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if error != nil {
             return
@@ -159,7 +234,5 @@ extension ViewController: GIDSignInDelegate {
     @IBAction func googleButtonClicked(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
     }
-    
-    
 }
 
