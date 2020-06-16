@@ -38,71 +38,17 @@ extension SignUpViewController {
         nameTextField.text = "nguyen"
         emailTextField.text = "scorcher159@gmail.com"
         passwordTextField.text = "123456"
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.locations = [0, 1]
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor.systemIndigo.cgColor, UIColor.systemGreen.cgColor]
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-        self.view.backgroundColor = .systemIndigo
-        
-        signUpLabel.textColor = .white
-        signUpLabel.font = UIFont(name: "ArialRoundedMTBold", size: 30)
-        
-        nameTextField.leftViewMode = UITextField.ViewMode.always
-        nameTextField.font = UIFont(name: "ArialRoundedMTBold", size: 15)
-        nameTextField.backgroundColor = UIColor.clear
-        nameTextField.tintColor = .white
-        nameTextField.textColor = .white
-        let nameBottomLine = CALayer()
-        nameBottomLine.frame = CGRect(x: 0, y: nameTextField.frame.height, width: self.view.frame.width - 40, height: 1)
-        nameBottomLine.backgroundColor = UIColor.white.cgColor
-        nameTextField.borderStyle = UITextField.BorderStyle.none
-        nameTextField.layer.addSublayer(nameBottomLine)
+
         nameTextField.leftView = UIImageView(image: UIImage(systemName: "person.fill"))
-        nameTextField.attributedPlaceholder = NSAttributedString(string: "ENTER USERNAME", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        nameTextField.placeholder = "ENTER USERNAME"
         
-        emailTextField.leftViewMode = UITextField.ViewMode.always
-        emailTextField.font = UIFont(name: "ArialRoundedMTBold", size: 15)
-        emailTextField.backgroundColor = UIColor.clear
-        emailTextField.tintColor = .white
-        emailTextField.textColor = .white
-        let emailBottomLine = CALayer()
-        emailBottomLine.frame = CGRect(x: 0, y: emailTextField.frame.height, width: self.view.frame.width - 40, height: 1)
-        emailBottomLine.backgroundColor = UIColor.white.cgColor
-        emailTextField.borderStyle = UITextField.BorderStyle.none
-        emailTextField.layer.addSublayer(emailBottomLine)
         emailTextField.leftView = UIImageView(image: UIImage(systemName: "envelope.fill"))
-        emailTextField.attributedPlaceholder = NSAttributedString(string: "ENTER EMAIL", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        emailTextField.placeholder = "ENTER EMAIL"
         
-        passwordTextField.placeholder = "Password"
-        passwordTextField.leftViewMode = UITextField.ViewMode.always
-        passwordTextField.font = UIFont(name: "ArialRoundedMTBold", size: 15)
-        passwordTextField.backgroundColor = UIColor.clear
-        passwordTextField.tintColor = .white
-        passwordTextField.textColor = .white
-        let passwordBottomLine = CALayer()
-        passwordBottomLine.frame = CGRect(x: 0, y: passwordTextField.frame.height, width: self.view.frame.width - 40, height: 1)
-        passwordBottomLine.backgroundColor = UIColor.white.cgColor
-        passwordTextField.borderStyle = UITextField.BorderStyle.none
-        passwordTextField.layer.addSublayer(passwordBottomLine)
         passwordTextField.leftView = UIImageView(image: UIImage(systemName: "lock.fill"))
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "ENTER PASSWORD", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        
-        signUpIndicator.isHidden = true
-        signUpIndicator.style = .large
-        signUpIndicator.color = .white
-        
-        signUpButton.tintColor = .white
-        signUpButton.layer.borderWidth = 2
-        signUpButton.layer.borderColor = UIColor.white.cgColor
-        signUpButton.frame.size.height = 50
-        signUpButton.contentEdgeInsets.top = 15
-        signUpButton.contentEdgeInsets.bottom = 15
-        signUpButton.titleLabel?.font = UIFont(name: "ArialRoundedMTBold", size: 15)
+        passwordTextField.placeholder = "ENTER PASSWORD"
+
         signUpButton.setImage(UIImage(systemName: "person.badge.plus.fill"), for: .normal)
-        signUpButton.layer.cornerRadius = signUpButton.frame.height / 2
-        signUpButton.clipsToBounds = true
     }
 }
 

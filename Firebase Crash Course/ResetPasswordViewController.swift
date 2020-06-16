@@ -10,15 +10,28 @@ import UIKit
 import Firebase
 
 class ResetPasswordViewController: UIViewController {
-
+    
+    @IBOutlet weak var resetPasswordLabel: UILabel!
+    @IBOutlet weak var resetPasswordButton: UIButton!
+    
     @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setOutlet()
         // Do any additional setup after loading the view.
     }
-    
+}
 
+extension ResetPasswordViewController {
+    func setOutlet() {
+        emailTextField.leftView = UIImageView(image: UIImage(systemName: "envelope.fill"))
+        emailTextField.placeholder = "ENTER EMAIL"
+        
+        resetPasswordButton.setImage(UIImage(systemName: "lock.fill"), for: .normal)
+    }
+}
+
+extension ResetPasswordViewController {
     @IBAction func resetPasswordButtonClicked(_ sender: Any) {
         // Validate the input
         let email = emailTextField.text!
@@ -35,15 +48,15 @@ class ResetPasswordViewController: UIViewController {
             let title = (error == nil) ? "Password Reset" : "Password Reset Error"
             let message = (error == nil) ? "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password." : error!.localizedDescription
             
-//            var title = ""
-//            var message = ""
-//            if let error = error {
-//                title = "Password Reset Error"
-//                message = error.localizedDescription
-//            } else {
-//                title = "Password Reset Follow-up"
-//                message = "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password."
-//            }
+            //            var title = ""
+            //            var message = ""
+            //            if let error = error {
+            //                title = "Password Reset Error"
+            //                message = error.localizedDescription
+            //            } else {
+            //                title = "Password Reset Follow-up"
+            //                message = "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password."
+            //            }
             
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
@@ -60,14 +73,4 @@ class ResetPasswordViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         })
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -21,10 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var contentView: UIView!
     
-    @IBOutlet weak var sideView: UIView!
-    @IBOutlet weak var menuView: UIView!
-    
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLayoutSubviews() {
         
     }
@@ -66,65 +65,39 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func setOutlet() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.locations = [0, 1]
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor.systemIndigo.cgColor, UIColor.systemGreen.cgColor]
-        menuView.layer.insertSublayer(gradientLayer, at: 0)
-        sideView.backgroundColor = UIColor(patternImage: UIImage(named: "light1.jpeg")!)
-        self.view.backgroundColor = .systemIndigo
-        
-        welcomeLabel.textColor = .white
-        welcomeLabel.font = UIFont(name: "ArialRoundedMTBold", size: 30)
-        
         logoImageView.image = UIImage(systemName: "camera.circle")
         logoImageView.tintColor = .white
         
-        signInIndicator.isHidden = true
-        signInIndicator.style = .large
-        signInIndicator.color = .white
-        
-        signInButton.tintColor = .white
-        signInButton.layer.borderWidth = 2
-        signInButton.layer.borderColor = UIColor.white.cgColor
-        signInButton.frame.size.height = 50
-        signInButton.contentEdgeInsets.top = 15
-        signInButton.contentEdgeInsets.bottom = 15
-        signInButton.titleLabel?.font = UIFont(name: "ArialRoundedMTBold", size: 15)
         signInButton.setImage(UIImage(systemName: "person.fill"), for: .normal)
-        signInButton.layer.cornerRadius = signInButton.frame.height / 2
-        signInButton.clipsToBounds = true
-        
-        signUpButton.tintColor = .white
-        signUpButton.layer.borderWidth = 2
-        signUpButton.layer.borderColor = UIColor.white.cgColor
-        signUpButton.frame.size.height = 50
-        signUpButton.contentEdgeInsets.top = 15
-        signUpButton.contentEdgeInsets.bottom = 15
-        signUpButton.titleLabel?.font = UIFont(name: "ArialRoundedMTBold", size: 15)
         signUpButton.setImage(UIImage(systemName: "person.badge.plus.fill"), for: .normal)
-        signUpButton.layer.cornerRadius = signUpButton.frame.height / 2
-        signUpButton.clipsToBounds = true
         
-        googleButton.tintColor = .white
         googleButton.backgroundColor = .systemRed
-        googleButton.frame.size.height = 50
-        googleButton.contentEdgeInsets.top = 15
-        googleButton.contentEdgeInsets.bottom = 15
-        googleButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         googleButton.setImage(UIImage(systemName: "g.circle.fill"), for: .normal)
-        googleButton.layer.cornerRadius = googleButton.frame.height / 2
-        googleButton.clipsToBounds = true
         
-        facebookButton.tintColor = .white
         facebookButton.backgroundColor = .systemIndigo
-        facebookButton.frame.size.height = 50
-        facebookButton.contentEdgeInsets.top = 15
-        facebookButton.contentEdgeInsets.bottom = 15
-        facebookButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         facebookButton.setImage(UIImage(systemName: "f.circle.fill"), for: .normal)
-        facebookButton.layer.cornerRadius = facebookButton.frame.height / 2
-        facebookButton.clipsToBounds = true
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tap1))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(tap2))
+    }
+    
+    @objc func tap1() {
+        self.view.endEditing(true)
+        let keyWindow = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "PostView") {
+            let navigationController =  UINavigationController.init(rootViewController: viewController)
+            keyWindow?.rootViewController = navigationController
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @objc func tap2() {
+        
     }
 }
 
