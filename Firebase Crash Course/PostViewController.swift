@@ -26,6 +26,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.postImageView.image = UIImage(named: "tower.jpeg")
         cell.voteLabel.text = "12"
         cell.usernameLabel.text = "Nguyen"
+        cell.contentView.setGradientBackground(firstColor: .systemRed, secondColor: .systemIndigo)
         return cell
     }
     

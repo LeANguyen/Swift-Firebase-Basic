@@ -16,14 +16,17 @@ class CustomView: UIView {
         gradientLayer.frame = self.bounds
         gradientLayer.colors = [UIColor.systemIndigo.cgColor, UIColor.systemRed.cgColor]
         self.layer.insertSublayer(gradientLayer, at: 0)
-        self.backgroundColor = .systemIndigo
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+}
 
+extension UIView {
+    func setGradientBackground(firstColor: UIColor, secondColor: UIColor) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.locations = [0, 1]
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = [firstColor.cgColor, secondColor.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 0)
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
 }

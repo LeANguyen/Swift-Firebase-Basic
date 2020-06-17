@@ -89,11 +89,10 @@ extension ViewController {
             .compactMap({$0})
             .first?.windows
             .filter({$0.isKeyWindow}).first
-        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "PostView") {
-            let navigationController =  UINavigationController.init(rootViewController: viewController)
-            keyWindow?.rootViewController = navigationController
-            self.dismiss(animated: true, completion: nil)
-        }
+        let storyBoard: UIStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
+        let tabBarController = storyBoard.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
+        let navigationController =  UINavigationController.init(rootViewController: tabBarController)
+        keyWindow?.rootViewController = navigationController
     }
     
     @objc func tap2() {
