@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		043447F2248CE4F9001D2D5B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */; };
 		043C58DB2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C58DA2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift */; };
-		04431FB924976ECC00557413 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04431FB824976ECC00557413 /* PostViewController.swift */; };
-		04431FBB249775F000557413 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04431FBA249775F000557413 /* CustomTabBarController.swift */; };
+		04431FB924976ECC00557413 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04431FB824976ECC00557413 /* PostTableViewController.swift */; };
 		044320092497AB2B00557413 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044320082497AB2B00557413 /* CustomButton.swift */; };
 		0443200B2497AB4D00557413 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443200A2497AB4D00557413 /* CustomTextField.swift */; };
 		0443200D2497ABA100557413 /* CustomIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443200C2497ABA100557413 /* CustomIndicator.swift */; };
@@ -19,7 +18,7 @@
 		044320132497B11E00557413 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044320122497B11E00557413 /* User.storyboard */; };
 		044320152497B34500557413 /* PhotoLibrary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044320142497B34500557413 /* PhotoLibrary.storyboard */; };
 		044320172497B35400557413 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044320162497B35400557413 /* Camera.storyboard */; };
-		044320192497B43000557413 /* PostTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044320182497B43000557413 /* PostTable.storyboard */; };
+		044320192497B43000557413 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044320182497B43000557413 /* Post.storyboard */; };
 		0443201B2497B44B00557413 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0443201A2497B44B00557413 /* TabBar.storyboard */; };
 		044E86A4248A708D00F2550D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E86A3248A708D00F2550D /* SignInViewController.swift */; };
 		044E86A6248A739200F2550D /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E86A5248A739200F2550D /* UserInfoViewController.swift */; };
@@ -61,8 +60,7 @@
 /* Begin PBXFileReference section */
 		043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		043C58DA2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerThirdPartyViewController.swift; sourceTree = "<group>"; };
-		04431FB824976ECC00557413 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		04431FBA249775F000557413 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		04431FB824976ECC00557413 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		044320082497AB2B00557413 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0443200A2497AB4D00557413 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0443200C2497ABA100557413 /* CustomIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicator.swift; sourceTree = "<group>"; };
@@ -71,7 +69,7 @@
 		044320122497B11E00557413 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		044320142497B34500557413 /* PhotoLibrary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoLibrary.storyboard; sourceTree = "<group>"; };
 		044320162497B35400557413 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
-		044320182497B43000557413 /* PostTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostTable.storyboard; sourceTree = "<group>"; };
+		044320182497B43000557413 /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		0443201A2497B44B00557413 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		044E86A3248A708D00F2550D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		044E86A5248A739200F2550D /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +149,7 @@
 			children = (
 				046DD08F24894C6D004DA1C7 /* Main.storyboard */,
 				0443201A2497B44B00557413 /* TabBar.storyboard */,
-				044320182497B43000557413 /* PostTable.storyboard */,
+				044320182497B43000557413 /* Post.storyboard */,
 				044320142497B34500557413 /* PhotoLibrary.storyboard */,
 				044320162497B35400557413 /* Camera.storyboard */,
 				044320122497B11E00557413 /* User.storyboard */,
@@ -196,20 +194,11 @@
 		046DD08824894C6D004DA1C7 /* Firebase Crash Course */ = {
 			isa = PBXGroup;
 			children = (
+				04898579249CBB2E0021E4A5 /* Controller */,
 				044320072497AAA200557413 /* Custom */,
 				044320062497AA5700557413 /* View */,
 				046DD08924894C6D004DA1C7 /* AppDelegate.swift */,
 				046DD08B24894C6D004DA1C7 /* SceneDelegate.swift */,
-				046DD08D24894C6D004DA1C7 /* ViewController.swift */,
-				044E86A3248A708D00F2550D /* SignInViewController.swift */,
-				044E86A7248A902800F2550D /* SignUpViewController.swift */,
-				044E86A5248A739200F2550D /* UserInfoViewController.swift */,
-				043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */,
-				045CA7FB2495196B0042126E /* PostTableViewCell.swift */,
-				04431FB824976ECC00557413 /* PostViewController.swift */,
-				04431FBA249775F000557413 /* CustomTabBarController.swift */,
-				043C58DA2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift */,
-				04DF90D7248F89A700D3D2D1 /* ImagePickerViewController.swift */,
 				046DD09524894C71004DA1C7 /* Assets.xcassets */,
 				046DD09724894C71004DA1C7 /* LaunchScreen.storyboard */,
 				046DD09A24894C71004DA1C7 /* Info.plist */,
@@ -235,6 +224,54 @@
 				046DD0B024894C71004DA1C7 /* Info.plist */,
 			);
 			path = "Firebase Crash CourseUITests";
+			sourceTree = "<group>";
+		};
+		04898579249CBB2E0021E4A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0489857A249CBB4A0021E4A5 /* Main */,
+				0489857D249CBB730021E4A5 /* Post */,
+				0489857C249CBB5B0021E4A5 /* Camera */,
+				0489857B249CBB530021E4A5 /* User */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0489857A249CBB4A0021E4A5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				046DD08D24894C6D004DA1C7 /* ViewController.swift */,
+				044E86A7248A902800F2550D /* SignUpViewController.swift */,
+				044E86A3248A708D00F2550D /* SignInViewController.swift */,
+				043447F1248CE4F9001D2D5B /* ResetPasswordViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0489857B249CBB530021E4A5 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				044E86A5248A739200F2550D /* UserInfoViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		0489857C249CBB5B0021E4A5 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				043C58DA2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift */,
+				04DF90D7248F89A700D3D2D1 /* ImagePickerViewController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		0489857D249CBB730021E4A5 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				045CA7FB2495196B0042126E /* PostTableViewCell.swift */,
+				04431FB824976ECC00557413 /* PostTableViewController.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		A63B36399CA1F57A48BBCB60 /* Frameworks */ = {
@@ -358,7 +395,7 @@
 			files = (
 				046DD09924894C71004DA1C7 /* LaunchScreen.storyboard in Resources */,
 				0443201B2497B44B00557413 /* TabBar.storyboard in Resources */,
-				044320192497B43000557413 /* PostTable.storyboard in Resources */,
+				044320192497B43000557413 /* Post.storyboard in Resources */,
 				044320172497B35400557413 /* Camera.storyboard in Resources */,
 				044320152497B34500557413 /* PhotoLibrary.storyboard in Resources */,
 				044320132497B11E00557413 /* User.storyboard in Resources */,
@@ -496,14 +533,13 @@
 				0443200F2497AECB00557413 /* CustomLabel.swift in Sources */,
 				044E86A8248A902800F2550D /* SignUpViewController.swift in Sources */,
 				044E86A6248A739200F2550D /* UserInfoViewController.swift in Sources */,
-				04431FB924976ECC00557413 /* PostViewController.swift in Sources */,
+				04431FB924976ECC00557413 /* PostTableViewController.swift in Sources */,
 				0443200B2497AB4D00557413 /* CustomTextField.swift in Sources */,
 				043447F2248CE4F9001D2D5B /* ResetPasswordViewController.swift in Sources */,
 				044320112497AF3800557413 /* CustomView.swift in Sources */,
 				044E86A4248A708D00F2550D /* SignInViewController.swift in Sources */,
 				046DD08A24894C6D004DA1C7 /* AppDelegate.swift in Sources */,
 				043C58DB2490C5FB007DC3E1 /* ImagePickerThirdPartyViewController.swift in Sources */,
-				04431FBB249775F000557413 /* CustomTabBarController.swift in Sources */,
 				046DD08C24894C6D004DA1C7 /* SceneDelegate.swift in Sources */,
 				046DD09424894C6D004DA1C7 /* Firebase_Crash_Course.xcdatamodeld in Sources */,
 				04DF90D8248F89A700D3D2D1 /* ImagePickerViewController.swift in Sources */,

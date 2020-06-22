@@ -7,18 +7,80 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Image Picker View Controller-->
         <scene sceneID="5kw-f4-UVM">
             <objects>
-                <viewController id="WuX-dw-Q9F" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6p0-Nm-oxX">
+                <viewController id="WuX-dw-Q9F" customClass="ImagePickerViewController" customModule="Firebase_Crash_Course" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6p0-Nm-oxX" customClass="CustomView" customModule="Firebase_Crash_Course" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wB2-Fh-lkH">
+                                <rect key="frame" x="20" y="64" width="374" height="627"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMAGE PICKER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkI-lE-zx6" customClass="CustomLabel" customModule="Firebase_Crash_Course" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Axi-lI-hb4">
+                                        <rect key="frame" x="0.0" y="40.5" width="374" height="374"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Axi-lI-hb4" secondAttribute="height" multiplier="1:1" id="mk3-3i-bNo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfM-ha-SqZ">
+                                        <rect key="frame" x="0.0" y="434.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WDv-6z-Cyy">
+                                        <rect key="frame" x="0.0" y="475" width="374" height="2"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzE-dU-rnY" customClass="CustomButton" customModule="Firebase_Crash_Course" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="497" width="374" height="30"/>
+                                        <state key="normal" title="PHOTO LIBRARY"/>
+                                        <connections>
+                                            <action selector="photoLibraryButtonClicked:" destination="WuX-dw-Q9F" eventType="touchUpInside" id="CHt-wG-o9W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECb-xv-iAj" customClass="CustomButton" customModule="Firebase_Crash_Course" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="547" width="374" height="30"/>
+                                        <state key="normal" title="CAMERA"/>
+                                        <connections>
+                                            <action selector="cameraButtonClicked:" destination="WuX-dw-Q9F" eventType="touchUpInside" id="gvQ-8e-xaS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGx-IE-ReT" customClass="CustomButton" customModule="Firebase_Crash_Course" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="597" width="374" height="30"/>
+                                        <state key="normal" title="UPLOAD IMAGE"/>
+                                        <connections>
+                                            <action selector="uploadImageButtonClicked:" destination="WuX-dw-Q9F" eventType="touchUpInside" id="zqz-Bc-eVm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wB2-Fh-lkH" firstAttribute="top" secondItem="UI2-EJ-Wqt" secondAttribute="top" constant="20" id="bHS-Rg-ogb"/>
+                            <constraint firstItem="UI2-EJ-Wqt" firstAttribute="trailing" secondItem="wB2-Fh-lkH" secondAttribute="trailing" constant="20" id="fGa-nF-HoU"/>
+                            <constraint firstItem="wB2-Fh-lkH" firstAttribute="leading" secondItem="UI2-EJ-Wqt" secondAttribute="leading" constant="20" id="pW6-aL-deb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UI2-EJ-Wqt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="photo" catalog="system" id="Wz3-U7-MXW"/>
+                    <tabBarItem key="tabBarItem" title="" image="photo" catalog="system" id="Wz3-U7-MXW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="ECb-xv-iAj" id="iMw-7q-Qvh"/>
+                        <outlet property="myImageView" destination="Axi-lI-hb4" id="1k7-2y-DTZ"/>
+                        <outlet property="percentLabel" destination="kfM-ha-SqZ" id="4ct-NJ-BZG"/>
+                        <outlet property="photoLibraryButton" destination="GzE-dU-rnY" id="MIa-nY-JFF"/>
+                        <outlet property="uploadImageButton" destination="tGx-IE-ReT" id="dni-bL-t9h"/>
+                        <outlet property="uploadProgressView" destination="WDv-6z-Cyy" id="Amb-Vo-edC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="liK-ZD-9Jt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

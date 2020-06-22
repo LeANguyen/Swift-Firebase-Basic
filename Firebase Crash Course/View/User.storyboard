@@ -7,18 +7,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--User Info View Controller-->
         <scene sceneID="TxL-ZX-T0N">
             <objects>
-                <viewController id="vw1-so-HyL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="y0d-1o-DW2">
+                <viewController id="vw1-so-HyL" customClass="UserInfoViewController" customModule="Firebase_Crash_Course" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y0d-1o-DW2" customClass="CustomView" customModule="Firebase_Crash_Course" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YaL-P7-ltQ">
+                                <rect key="frame" x="0.0" y="64" width="414" height="297.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MG-hv-Q9W" customClass="CustomLabel" customModule="Firebase_Crash_Course" customModuleProvider="target">
+                                        <rect key="frame" x="186" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEX-SO-Uig">
+                                        <rect key="frame" x="103.5" y="40.5" width="207" height="207"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aEX-SO-Uig" secondAttribute="height" id="IVp-7g-Eb7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynG-yb-KaU" customClass="CustomButton" customModule="Firebase_Crash_Course" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="267.5" width="374" height="30"/>
+                                        <state key="normal" title="SIGN OUT"/>
+                                        <connections>
+                                            <action selector="signOutButtonClicked:" destination="vw1-so-HyL" eventType="touchUpInside" id="2qP-hZ-hul"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ynG-yb-KaU" firstAttribute="leading" secondItem="YaL-P7-ltQ" secondAttribute="leading" constant="20" id="1DU-5b-hFg"/>
+                                    <constraint firstAttribute="trailing" secondItem="ynG-yb-KaU" secondAttribute="trailing" constant="20" id="RDa-EI-lzT"/>
+                                    <constraint firstItem="aEX-SO-Uig" firstAttribute="width" secondItem="YaL-P7-ltQ" secondAttribute="width" multiplier="0.5" id="XCh-GE-IJO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UrG-eQ-qGs" firstAttribute="trailing" secondItem="YaL-P7-ltQ" secondAttribute="trailing" id="Z7s-KQ-r0g"/>
+                            <constraint firstItem="YaL-P7-ltQ" firstAttribute="leading" secondItem="UrG-eQ-qGs" secondAttribute="leading" id="mkf-R9-XyX"/>
+                            <constraint firstItem="YaL-P7-ltQ" firstAttribute="top" secondItem="UrG-eQ-qGs" secondAttribute="top" constant="20" id="oEa-JQ-h1i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UrG-eQ-qGs"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="Oku-Zx-wHL"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="Oku-Zx-wHL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="5MG-hv-Q9W" id="K1y-8q-kI4"/>
+                        <outlet property="userImageView" destination="aEX-SO-Uig" id="zUx-Gz-JGo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtq-pW-dpJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

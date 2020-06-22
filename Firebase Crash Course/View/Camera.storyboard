@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="zMo-a0-P6B">
             <objects>
                 <viewController id="n7q-xb-OAb" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="AWW-zY-A1E"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="camera" catalog="system" id="vO8-9F-i1N"/>
+                    <tabBarItem key="tabBarItem" title="" image="camera" catalog="system" id="vO8-9F-i1N"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86d-3r-R1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
