@@ -62,33 +62,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        for familyName in UIFont.familyNames {
-//            print("\n-- \(familyName) \n")
-//            for fontName in UIFont.fontNames(forFamilyName: familyName) {
-//                print(fontName)
-//            }
-//        }
         setOutlet()
         setGIDSignIn()
-        //        let ref = Database.database().reference()
-        
-        // Do any additional setup after loading the view.
-        
-        // Create
-        //        ref.child("student1").setValue(["name": "Nguyen", "age": 22])
-        
-        // Get
-        //        ref.child("student1/name").observeSingleEvent(of: .value) { (snapshot) in
-        //            guard let name = snapshot.value as? String else {return}
-        //            print(name)
-        //        }
-        //
-        //        // Update
-        //        ref.child("student1/name").setValue("Phi")
-        //        ref.child("student1").updateChildValues(["name":"Dong", "age":23])
-        //
-        //        // Delete
-        //        ref.child("student1/age").removeValue()
     }
 }
 
@@ -154,6 +129,12 @@ extension ViewController {
                 self.signInIndicator.isHidden = true
                 self.signInIndicator.stopAnimating()
             } else {
+                // Create
+                guard let currentUser = Auth.auth().currentUser else { return }
+                guard let displayName = currentUser.displayName else { return }
+                let ref = Database.database().reference().child("users/\(currentUser.uid)")
+                ref.child("name").setValue(displayName)
+                
                 self.switchViewController(storyBoardId: "TabBar", viewControllerId: "TabBar")
             }
         })
@@ -189,6 +170,12 @@ extension ViewController: GIDSignInDelegate {
                 self.signInIndicator.stopAnimating()
                 return
             } else {
+                // Create
+                guard let currentUser = Auth.auth().currentUser else { return }
+                guard let displayName = currentUser.displayName else { return }
+                let ref = Database.database().reference().child("users/\(currentUser.uid)")
+                ref.child("name").setValue(displayName)
+                
                 self.switchViewController(storyBoardId: "TabBar", viewControllerId: "TabBar")
             }
         }

@@ -21,6 +21,7 @@ class UserInfoViewController: UIViewController {
         if let currentUser = Auth.auth().currentUser {
             if let displayName = currentUser.displayName {
                 nameLabel.text = displayName
+                print(currentUser.uid)
             } else {
                 print("THERE IS NO NAME TO BE DISPLAYED")
             }

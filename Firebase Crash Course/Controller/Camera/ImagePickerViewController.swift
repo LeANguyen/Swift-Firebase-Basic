@@ -82,7 +82,16 @@ extension ImagePickerViewController: UINavigationControllerDelegate, UIImagePick
     }
     
     @IBAction func uploadImageButtonClicked(_ sender: Any) {
-        let imageStorageRef = Storage.storage().reference().child("images").child("uploaded-image")
+        guard let currentUser = Auth.auth().currentUser else { return }
+        guard let displayName = currentUser.displayName else { return }
+        
+        // Get
+        Database.database().reference().child("users").child(currentUser.uid).child("uploaded").observeSingleEvent(of: .value) { (snapshot) in
+            guard let name = snapshot.value as? String else {return}
+            print(name)
+        }
+        
+        let imageStorageRef = Storage.storage().reference().child("images").child(currentUser.uid).child("uploaded-image")
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpg"
         guard let imageData = myImageView.image?.pngData() else { return }
@@ -93,9 +102,8 @@ extension ImagePickerViewController: UINavigationControllerDelegate, UIImagePick
                     print("GET DOWNLOAD URL ERROR: \(error)")
                 } else {
                     print(url!)
-                    let ref = Database.database().reference()
-                    // Create
-                    ref.child("user").setValue(["name": Auth.auth().currentUser?.email, "url": "\(url!)"])
+                    let ref = Database.database().reference().child("posts").childByAutoId()
+                    ref.setValue(["userId": Auth.auth().currentUser?.uid, "url": "\(url!)", "description": "We will put something here"])
                 }
             }
         }

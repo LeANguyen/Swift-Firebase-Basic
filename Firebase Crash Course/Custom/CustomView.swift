@@ -14,7 +14,7 @@ class CustomView: UIView {
         let gradientLayer = CAGradientLayer()
         gradientLayer.locations = [0, 1]
         gradientLayer.frame = self.bounds
-        gradientLayer.colors = [UIColor.systemIndigo.cgColor, UIColor.systemRed.cgColor]
+        gradientLayer.colors = [UIColor.systemGreen.cgColor, UIColor.systemRed.cgColor]
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
 }

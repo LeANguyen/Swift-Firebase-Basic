@@ -20,11 +20,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpIndicator: UIActivityIndicatorView!
     
     override func viewDidLayoutSubviews() {
-//        setOutlet()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
     }
     
     override func viewDidLoad() {
@@ -97,6 +95,29 @@ extension SignUpViewController {
                     self.signUpIndicator.isHidden = true
                     self.signUpIndicator.stopAnimating()
                 } else {
+                    // Create
+                    guard let currentUser = Auth.auth().currentUser else { return }
+                    guard let displayName = currentUser.displayName else { return }
+                    let ref = Database.database().reference().child("users").child(currentUser.uid)
+                    ref.child("name").setValue(displayName)
+                    
+//                    ref.child("name").setValue(displayName)
+//                    // Create
+//                    ref.child("users").setValue(["name": "Nguyen", "age": 22])
+//
+//                    // Get
+//                    ref.child("student1/name").observeSingleEvent(of: .value) { (snapshot) in
+//                        guard let name = snapshot.value as? String else {return}
+//                        print(name)
+//                    }
+//
+//                    // Update
+//                    ref.child("student1/name").setValue("Phi")
+//                    ref.child("student1").updateChildValues(["name":"Dong", "age":23])
+//
+//                    // Delete
+//                    ref.child("student1/age").removeValue()
+                    
                     self.sendEmailVerification()
                 }
             })
